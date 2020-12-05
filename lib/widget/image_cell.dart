@@ -11,16 +11,13 @@ class ImageCell extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue,
-      // height:imageMsg.height/10,
-      // width:imageMsg.width/20,
-      constraints: BoxConstraints(
-          minHeight: screen.setWidth(148) / imageMsg.width * imageMsg.height,
-          minWidth: screen.setWidth(148)),
+      padding: EdgeInsets.all(screen.setWidth(2)),
+      width: screen.screenWidth / 2,
+      height: screen.screenWidth / 2 / imageMsg.width * imageMsg.height,
       child: Image.network(
         imageMsg.imageUrls[0].medium,
-        // width: imageMsg.width,
-        // height: imageMsg.height/10,
+        // width: screen.setWidth(150),
+        // height:screen.setWidth(160) / imageMsg.width * imageMsg.height,
         headers: {'Referer': 'https://app-api.pixiv.net'},
       ),
     );
