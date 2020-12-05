@@ -3,7 +3,7 @@ import 'dart:math';
 
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:jy6c9w08_flutter/getController/snow_man.dart';
+import 'package:jy6c9w08_flutter/get_controller/snow_man.dart';
 
 class SnowMan extends StatelessWidget {
   final List<SnowFlake> _snowFlakes =

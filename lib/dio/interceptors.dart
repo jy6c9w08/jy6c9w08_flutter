@@ -13,8 +13,7 @@ class DioInterceptors extends Interceptor {
   @override
   Future onResponse(Response response) async {
     print('this is response');
-
-   print(response);
+   // print(response);
    return response;
   }
 
@@ -23,7 +22,7 @@ class DioInterceptors extends Interceptor {
     print('this is error');
     // print(err);
     if(err.response.statusCode==404){
-      print("object");
+      print("404 Error");
     }
   }
 }

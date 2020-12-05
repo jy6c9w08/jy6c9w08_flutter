@@ -24,6 +24,13 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^3.21.3
+  dio: ^3.0.10
+  waterfall_flow: ^2.0.5
+  json_serializable: ^3.5.1
+  build_runner: ^1.10.7
+  flutter_screenutil: ^3.2.0
+
+
 
 
   # The following adds the Cupertino Icons font to your application.
