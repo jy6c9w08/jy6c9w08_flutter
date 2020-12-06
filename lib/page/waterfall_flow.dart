@@ -27,6 +27,8 @@ class WaterfallFlowPage extends StatelessWidget {
                       gridDelegate:
                           SliverWaterfallFlowDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
+                            crossAxisSpacing: 7,
+                            mainAxisSpacing: 7
                       ),
                     );
             }));
