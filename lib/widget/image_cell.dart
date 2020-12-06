@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/screenutil.dart';
 import 'package:get/get.dart';
 import 'package:extended_image/extended_image.dart';
 import 'package:jy6c9w08_flutter/get_controller/image.dart';
+import 'package:like_button/like_button.dart';
 
 class ImageCell extends StatelessWidget {
   final String imageId;
@@ -24,8 +25,18 @@ class ImageCell extends StatelessWidget {
         print("加载成功");
         return FadeTransition(
           opacity: imageController.controller,
-          child: ExtendedRawImage(
-            image: state.extendedImageInfo?.image,
+          child: Stack(
+            children: [
+              ExtendedRawImage(
+                image: state.extendedImageInfo?.image,
+              ),
+              Positioned(
+                  bottom: 10,
+                  right: 10,
+                  child: LikeButton(
+                    size: 40,
+                  ))
+            ],
           ),
         );
 
@@ -49,7 +60,7 @@ class ImageCell extends StatelessWidget {
                 BorderRadius.all(Radius.circular(ScreenUtil().setWidth(15))),
             child: ExtendedImage.network(
               imageController.illust.imageUrls[0].medium,
-              key: ValueKey(imageId),
+              cache: true,
               headers: {'Referer': 'https://app-api.pixiv.net'},
               width: screen.screenWidth / 2,
               height: screen.screenWidth /
