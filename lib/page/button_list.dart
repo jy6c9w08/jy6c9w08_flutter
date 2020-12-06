@@ -18,6 +18,7 @@ class ButtonList extends StatelessWidget {
             children: [
               HomeButton(buttonName: 'snow_man'),
               HomeButton(buttonName: 'waterfall_flow'),
+              HomeButton(buttonName: 'loading_box'),
             ],
           ),
         ),
