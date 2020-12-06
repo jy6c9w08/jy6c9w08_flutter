@@ -11,7 +11,7 @@ class ImageController extends GetxController with SingleGetTickerProviderMixin {
   @override
   void onInit() {
     controller = AnimationController(
-      duration: Duration(seconds: 1),
+      duration: Duration(milliseconds: 700),
       vsync: this,
     );
     super.onInit();
@@ -19,10 +19,9 @@ class ImageController extends GetxController with SingleGetTickerProviderMixin {
 
   void createController() {
     controller = AnimationController(
-      duration: Duration(seconds: 1),
+      duration: Duration(milliseconds: 700),
       vsync: this,
     );
-    controller.forward();
   }
 
   @override
