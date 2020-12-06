@@ -22,7 +22,7 @@ class WaterfallFlowController extends GetxController {
     getData().then((list) {
       illustList = list;
       listCount = list.length;
-      update();
+      update(['list']);
     });
   }
 
@@ -48,7 +48,7 @@ class WaterfallFlowController extends GetxController {
       getData(currentPage: currentPage).then((list) {
         illustList = illustList + list;
         listCount = illustList.length;
-        update();
+        update(['list']);
       });
       Future.delayed(Duration(seconds: 1), () => loadMore = true);
     }
