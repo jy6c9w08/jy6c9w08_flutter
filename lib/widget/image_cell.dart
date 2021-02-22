@@ -59,9 +59,9 @@ class ImageCell extends StatelessWidget {
             borderRadius:
                 BorderRadius.all(Radius.circular(ScreenUtil().setWidth(15))),
             child: ExtendedImage.network(
-              imageController.illust.imageUrls[0].medium,
+              imageController.illust.imageUrls[0].medium.replaceAll('https://i.pximg.net', 'https://acgpic.net'),
               cache: true,
-              headers: {'Referer': 'https://app-api.pixiv.net'},
+              headers: {'Referer': 'https://m.sharemoe.net/'},
               width: screen.screenWidth / 2,
               height: screen.screenWidth /
                   2 /
